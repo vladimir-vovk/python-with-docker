@@ -1,11 +1,13 @@
-# Description
+# Files description
 
 - docker-compose.yml
+
   Configuration for all docker containers used in your application.
   
   Файл для запуска всех сервисов (контейнеров) нужных для разработки (деплоя).
 
 - Dockerfile
+
   Configuration for your python app docker container.
 
   Описание контейнера вашего python приложения.
