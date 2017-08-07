@@ -1,0 +1,24 @@
+postgres:
+  image: postgres:latest
+  volumes:
+    - postgres_data:/var/lib/postgresql/data
+
+redis:
+  image: redis:latest
+  volumes:
+    - redis_data:/data
+
+app:
+  dockerfile: docker/Dockerfile
+  build: .
+  # environment:
+  #   - DJANGO_SETTINGS_MODULE=project.settings.dev
+  # command: /bin/bash -c "python manage.py runserver 0.0.0.0:8000"
+  command: /bin/bash
+  volumes:
+    - .:/app
+  ports:
+    - "8000:8000"
+  links:
+    - postgres
+    - redis
