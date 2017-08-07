@@ -1,14 +1,16 @@
-Files description:
-Описание файлов:
+# Description
+
 - docker-compose.yml
   Configuration for all docker containers used in your application.
-
+  
   Файл для запуска всех сервисов (контейнеров) нужных для разработки (деплоя).
 
 - Dockerfile
   Configuration for your python app docker container.
 
   Описание контейнера вашего python приложения.
+
+# Prerequisites
 
 Docker must be installed on your local machine, virtual machine or remote server. 
 If you run docker on virtual machine or remote server you need to setup you environment.
@@ -19,6 +21,8 @@ Docker должн быть установлен на хостовой машин
 docker-machine ls
 eval $(docker-machine env <docker_machine_name>)
 ```
+
+# Usage
 
 1. Copy all files (docker folder and docker-compose.yml) to your project folder.
 
